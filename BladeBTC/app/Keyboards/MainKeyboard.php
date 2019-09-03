@@ -19,7 +19,7 @@ class MainKeyboard
      *
      * @return array
      */
-    public static function get($user_balance = null)
+    public static function get($user_balance)
     {
         return Keyboard::create()
             ->type(Keyboard::TYPE_KEYBOARD)
