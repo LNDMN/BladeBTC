@@ -53,7 +53,6 @@ class Wallet
     }
 
 
-
     /**
      * Get wallet balance
      *
@@ -99,17 +98,12 @@ class Wallet
         $wallet = BotSettings::where('id', 1)->first()->wallet_id;
         $main_password = BotSettings::where('id', 1)->first()->wallet_password;
         $second_password = BotSettings::where('id', 1)->first()->wallet_second_password;
-        $fee = BotInvestmentPlans::where('active', 1)->first()->withdraw_fee;
 
-        /**
-         * Removing transaction fee
-         */
-        $send_amount_without_fee = $satoshi_amount - $fee;
 
         /**
          * Request URL
          */
-        $url = "http://127.0.0.1:3000/merchant/$wallet/payment?password=$main_password&second_password=$second_password&to=$to_wallet_address&amount=$send_amount_without_fee&fee=$fee";
+        $url = "http://127.0.0.1:3000/merchant/$wallet/payment?password=$main_password&second_password=$second_password&to=$to_wallet_address&amount=$satoshi_amount";
         $data = Curl::get($url);
         return $data;
     }

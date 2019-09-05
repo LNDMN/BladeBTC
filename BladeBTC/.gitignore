@@ -6,6 +6,7 @@
 /.idea
 /.vagrant
 /.discovery
+/.vs
 Homestead.json
 Homestead.yaml
 npm-debug.log

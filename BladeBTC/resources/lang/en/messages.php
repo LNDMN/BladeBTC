@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Keyboards Language Lines
+    | Messages Language Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are used for
@@ -41,5 +41,30 @@ return [
     "new_investment" => "You may start another investment by pressing the <b>Invest</b> button. Your balance will grow according to the base rate.",
     "reinvest_not_enough" => "Sorry to tell you that, but your balance isn't high enough for that!\n<b>Minimum: :minimum_reinvest BTC</b>",
     "reinvest_error" => "An error occurred while reinvesting your balance:\n\n<b>:error</b> \xF0\x9F\x98\x96",
-    "reinvest_success" => "Congratulation your balance has been properly reinvested!"
+    "reinvest_success" => "Congratulation your balance has been properly reinvested!",
+    "wallet_not_set" => "Not set",
+    "wallet_question_1" => "\xF0\x9F\x94\x91 <b>Wallet Overview</b> \xF0\x9F\x94\x91\n\nCurrently, your withdrawal address is:\n\n<b>:wallet_address</b>\n\nWhat do you like to do now?",
+    "wallet_option_1" => "Update Withdrawal Address",
+    "wallet_option_2" => "Delete My Withdrawal Address",
+    "wallet_option_3" => "Return to Bot",
+    "wallet_msg_1" => "Your account was successfully updated.",
+    "wallet_msg_2" => "No changes have been made to your account.",
+    "wallet_msg_3" => "Please select one of the available actions in the chat box.",
+    "wallet_msg_4" => "Please enter your withdrawal address in the chat box.",
+    "wallet_msg_5" => "Your account was successfully updated.",
+    "wallet_msg_6" => "Your address is now: <b>:wallet_address</b>",
+    "wallet_msg_7" => "The BTC address you provided is invalid.\nNo changes have been made to your account.\nTry again!",
+    "withdraw_option_yes" => "Yes",
+    "withdraw_option_no" => "No",
+    "withdraw_question_1" => "Your withdrawal address is:\n\n<b>:wallet_address</b>\n\nPlease confirm that is correct?",
+    "withdraw_msg_1" => "Your withdrawal address is currently not set. Please use the `Wallet` button to setup your withdrawal address into your account.",
+    "withdraw_msg_2" => "OK! While you said the withdrawal address is invalid, you need to got to <b>`Wallet`</b> option and update your account with your new address. Start the withdraw process again after that.",
+    "withdraw_msg_3" => "Please enter the amount to withdraw?",
+    "withdraw_msg_4" => "The amount you submitted is not valid. It must be in numerical format. To cancel this transaction type <b>cancel</b>",
+    "withdraw_msg_5" => "The transaction was cancel at your request!",
+    "withdraw_msg_6" => "The minimum withdraw amount is currently set to <b>:minimum_withdraw</b>. Please enter an amount higher than this minimum.",
+    "withdraw_msg_7" => "I'm sorry to tell you this but your account have not enough balance.",
+    "withdraw_msg_8" => "An error occurred during withdraw process.\n:error_msg \xF0\x9F\x98\x96",
+
 ];
+

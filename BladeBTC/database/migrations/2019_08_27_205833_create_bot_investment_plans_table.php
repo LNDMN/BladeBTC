@@ -17,10 +17,10 @@ class CreateBotInvestmentPlansTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->decimal('minimum_invest', 15, 8)->nullable()->default(null);
-            $table->decimal('minimum_reinvest', 15, 8)->nullable()->default(null);
-            $table->decimal('minimum_payout', 15, 8)->nullable()->default(null);
             $table->decimal('minimum_invest_usd', 15, 2)->nullable()->default(null);
+            $table->decimal('minimum_reinvest', 15, 8)->nullable()->default(null);
             $table->decimal('minimum_reinvest_usd', 15, 2)->nullable()->default(null);
+            $table->decimal('minimum_payout', 15, 8)->nullable()->default(null);
             $table->decimal('minimum_payout_usd', 15, 2)->nullable()->default(null);
             $table->decimal('referral_bonus_usd', 15, 2)->nullable()->default(null);
             $table->integer('base_rate')->nullable()->default(null);
@@ -29,7 +29,6 @@ class CreateBotInvestmentPlansTable extends Migration
             $table->integer('timer_time_hour')->nullable()->default(null);
             $table->integer('required_confirmations')->nullable()->default(null);
             $table->integer('interest_on_reinvest')->nullable()->default(null);
-            $table->integer('withdraw_fee')->nullable()->default(null);
             $table->boolean('active')->default(false);
             $table->timestamps();
         });

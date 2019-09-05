@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Conversations\WalletConversation;
+use App\Conversations\WithdrawConversation;
 use App\Helpers\Btc;
 use App\Helpers\Wallet;
 use App\Keyboards\MainKeyboard;
@@ -314,16 +316,7 @@ class BotManController extends Controller
      */
     public function withdraw(BotMan $bot)
     {
-
-        /**
-         * User built from database value
-         */
-        $user = BotUsers::getCreate($bot->getUser());
-
-        $bot->reply(
-            "Withdraw",
-            array_add(MainKeyboard::get($user->balance), "parse_mode", "HTML")
-        );
+        $bot->startConversation(new WithdrawConversation());
     }
 
     /**
@@ -333,16 +326,7 @@ class BotManController extends Controller
      */
     public function wallet(BotMan $bot)
     {
-
-        /**
-         * User built from database value
-         */
-        $user = BotUsers::getCreate($bot->getUser());
-
-        $bot->reply(
-            "Wallet",
-            array_add(MainKeyboard::get($user->balance), "parse_mode", "HTML")
-        );
+        $bot->startConversation(new WalletConversation());
     }
 
     /**
